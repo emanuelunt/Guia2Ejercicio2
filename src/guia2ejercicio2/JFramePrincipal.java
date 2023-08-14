@@ -31,6 +31,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Convertir a Fahrenheit");
 
         jLabel1.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel1.setText("Celsius:");
@@ -82,12 +83,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
             double fahre = grados * 9 / 5 + 32;
             JOptionPane.showMessageDialog(this, "Grados Fahrenheint: " + fahre);
+            jtCelsius.setText("");
+            jtCelsius.requestFocus();
 
         } catch (NumberFormatException error) {
             
             JOptionPane.showMessageDialog(this, "Ingrese un Valor númerico");
             jtCelsius.setText("");
-
+            jtCelsius.requestFocus();
         }
 
 
